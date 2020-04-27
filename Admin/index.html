@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="A front-end template that helps you build fast, modern mobile web apps."
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <title>CORONA | NSS | IIT JAMMU</title>
+
+    <link rel="stylesheet" href="../css/responsee.css" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- CUSTOM STYLE -->
+    <link rel="stylesheet" href="../css/template-style.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="icon" sizes="192x192" href="images/logo.png" />
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite" />
+    <link rel="apple-touch-icon-precomposed" href="images/logo.png" />
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/logo.png" />
+    <meta name="msapplication-TileColor" content="#3372DF" />
+
+    <link rel="shortcut icon" href="images/logo.png" />
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.getmdl.io/1.3.0/material.cyan-light_blue.min.css"
+    />
+    <style>
+      /* width */
+      ::-webkit-scrollbar {
+        width: 3px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 5px;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: aquamarine;
+        border-radius: 5px;
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: aqua;
+      }
+    </style>
+
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <dialog class="mdl-dialog" id="PC">
+      <div class="mdl-dialog__content">
+        <h5>
+          Change Password
+        </h5>
+        <div
+          class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+        >
+          <input class="mdl-textfield__input" type="password" id="CP" />
+          <label class="mdl-textfield__label" for="CP">Current Password</label>
+        </div>
+        <div
+          class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+        >
+          <input class="mdl-textfield__input" type="password" id="NP" />
+          <label class="mdl-textfield__label" for="NP">New Password</label>
+        </div>
+      </div>
+      <div class="mdl-dialog__actions">
+        <button type="button" class="mdl-button close">
+          <i class="material-icons">close</i>
+        </button>
+        <button type="button" class="mdl-button change">CHANGE</button>
+      </div>
+    </dialog>
+
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header
+        class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600"
+      >
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Home</span>
+
+          <div class="mdl-layout-spacer"></div>
+        </div>
+      </header>
+      <div
+        class="mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50"
+      >
+        <header class="demo-drawer-header">
+          <img src="images/user.jpg" class="demo-avatar" />
+          <div class="demo-avatar-dropdown">
+            <span>ADMIN</span>
+            <div class="mdl-layout-spacer"></div>
+            <button
+              id="accbtn"
+              class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+            >
+              <i class="material-icons" role="presentation">arrow_drop_down</i>
+              <span class="visuallyhidden">Accounts</span>
+            </button>
+            <ul
+              class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+              for="accbtn"
+              id="signout"
+            >
+              <li class="mdl-menu__item">SIGN OUT</li>
+            </ul>
+          </div>
+        </header>
+        <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
+          <a
+            id="home"
+            class="mdl-navigation__link mdl-color-text--white"
+            href="index.html"
+            ><i
+              style="margin-right: 48px;"
+              class="mdl-color-text--white material-icons"
+              role="presentation"
+              >home</i
+            >Home</a
+          >
+          <a
+            class="mdl-navigation__link mdl-color-text--grey"
+            href="advisory.html"
+            ><i
+              style="margin-right: 48px;"
+              class="mdl-color-text--grey material-icons"
+              role="presentation"
+              >list</i
+            >Advisory List</a
+          >
+          <a
+            class="mdl-navigation__link mdl-color-text--grey"
+            href="gallery.html"
+            ><i
+              class="mdl-color-text--grey material-icons"
+              style="margin-right: 48px;"
+              role="presentation"
+              >image</i
+            >Gallery</a
+          >
+          <a
+            class="mdl-navigation__link mdl-color-text--grey"
+            href="videos.html"
+            ><i
+              style="margin-right: 48px;"
+              class="mdl-color-text--grey material-icons"
+              role="presentation"
+              >video_library</i
+            >Videos</a
+          >
+
+          <a
+            class="mdl-navigation__link mdl-color-text--grey"
+            style="cursor: pointer;"
+            onclick="Changepassword()"
+            ><i class="mdl-color-text--grey material-icons" role="presentation"
+              >lock</i
+            >
+            Edit Password</a
+          >
+        </nav>
+      </div>
+
+      <div>
+        <h1 style="text-align: center;">Admin dashboard</h1>
+
+        <div class="s-12 m-6 l-6" style="padding: 15px;">
+          <a
+            class="image-with-hover-overlay image-hover-zoom"
+            title="Portfolio Image"
+          >
+            <div class="image-hover-overlay background-primary">
+              <div class="image-hover-overlay-content text-center padding-2x">
+                <h3 class="text-white text-size-20 margin-bottom-10">
+                  Reference Title
+                </h3>
+                <p class="text-white text-size-14 margin-bottom-20">
+                  Duis autem vel eum iriure dolor in hendrerit in vulputate
+                  velit esse molestie. Lorem ipsum dolor sit amet, consectetuer
+                  adipiscing elit, sed diam nonummy nibh euismod.
+                </p>
+              </div>
+            </div>
+            <img class="full-img" src="img/portfolio/11.png" />
+          </a>
+        </div>
+        <div class="s-12 m-6 l-6" style="padding: 15px;">
+          <a
+            class="image-with-hover-overlay image-hover-zoom"
+            title="Portfolio Image"
+          >
+            <div class="image-hover-overlay background-primary">
+              <div class="image-hover-overlay-content text-center padding-2x">
+                <h3 class="text-white text-size-20 margin-bottom-10">
+                  Reference Title
+                </h3>
+                <p class="text-white text-size-14 margin-bottom-20">
+                  Duis autem vel eum iriure dolor in hendrerit in vulputate
+                  velit esse molestie. Lorem ipsum dolor sit amet, consectetuer
+                  adipiscing elit, sed diam nonummy nibh euismod.
+                </p>
+              </div>
+            </div>
+            <img class="full-img" src="img/portfolio/19.png" />
+          </a>
+        </div>
+        <div class="s-12 m-6 l-6" style="padding: 15px;">
+          <a
+            class="image-with-hover-overlay image-hover-zoom"
+            title="Portfolio Image"
+          >
+            <div class="image-hover-overlay background-primary">
+              <div class="image-hover-overlay-content text-center padding-2x">
+                <h3 class="text-white text-size-20 margin-bottom-10">
+                  Reference Title
+                </h3>
+                <p class="text-white text-size-14 margin-bottom-20">
+                  Duis autem vel eum iriure dolor in hendrerit in vulputate
+                  velit esse molestie. Lorem ipsum dolor sit amet, consectetuer
+                  adipiscing elit, sed diam nonummy nibh euismod.
+                </p>
+              </div>
+            </div>
+            <img class="full-img" src="img/portfolio/23.png " />
+          </a>
+        </div>
+        <div class="s-12 m-6 l-6" style="padding: 15px;">
+          <a
+            class="image-with-hover-overlay image-hover-zoom"
+            title="Portfolio Image"
+          >
+            <div class="image-hover-overlay background-primary">
+              <div class="image-hover-overlay-content text-center padding-2x">
+                <h3 class="text-white text-size-20 margin-bottom-10">
+                  Reference Title
+                </h3>
+                <p class="text-white text-size-14 margin-bottom-20">
+                  Duis autem vel eum iriure dolor in hendrerit in vulputate
+                  velit esse molestie. Lorem ipsum dolor sit amet, consectetuer
+                  adipiscing elit, sed diam nonummy nibh euismod.
+                </p>
+              </div>
+            </div>
+            <img class="full-img" src="img/portfolio/52.png " />
+          </a>
+        </div>
+      </div>
+      <script>
+        var password;
+        var current = document.getElementById("current");
+
+        function Changepassword() {
+          var dialog = document.getElementById("PC");
+
+          dialog.showModal();
+          var CP = document.getElementById("CP");
+          var NP = document.getElementById("NP");
+          dialog
+            .querySelector(".change")
+            .addEventListener("click", function () {
+              if (CP.value != "") {
+                if (NP.value != "") {
+                  var updates = {};
+
+                  if (password == CP.value) {
+                    updates["password"] = NP.value;
+                    firebase
+                      .database()
+                      .ref()
+                      .child("Admin")
+                      .update(updates)
+                      .then(function () {
+                        alert("Password Changed !");
+                        CP.value = "";
+                        NP.value = "";
+                        dialog.close();
+                      })
+                      .catch(function (error) {
+                        alert("Failed: " + error.message);
+                      });
+                  } else {
+                    alert("Incorrect Password");
+                  }
+                } else {
+                  alert("Please fill new Password");
+                }
+              } else {
+                alert("Please fill current Password");
+              }
+            });
+
+          dialog.querySelector(".close").addEventListener("click", function () {
+            CP.value = "";
+            NP.value = "";
+            dialog.close();
+          });
+        }
+      </script>
+    </div>
+
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1  /firebase-database.js"></script>
+
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBVM--ExqH1GXjbFkDg1g44eKqdO6xQRnM",
+        authDomain: "fir-dfc32.firebaseapp.com",
+        databaseURL: "https://fir-dfc32.firebaseio.com",
+        projectId: "fir-dfc32",
+        storageBucket: "fir-dfc32.appspot.com",
+        messagingSenderId: "296505807733",
+        appId: "1:296505807733:web:066ba17f1840c2f535393c",
+      };
+      firebase.initializeApp(config);
+
+      var signout = document.getElementById("signout");
+      signout.addEventListener("click", myFunction);
+
+      var updates = {};
+      updates["logged"] = "no";
+      firebase
+        .database()
+        .ref("Admin")
+        .on("value", function (snapshot) {
+          if (snapshot != null) {
+            var valueU = snapshot.child("logged").val();
+            if (valueU != null) {
+              if (valueU == "no") {
+                window.location.href = "login.html";
+              }
+            } else {
+              window.location.href = "login.html";
+            }
+          }
+        });
+
+      var fc = document.getElementById("fc");
+      var to = document.getElementById("to");
+
+      firebase
+        .database()
+        .ref()
+        .child("Admin")
+        .on("value", function (snapshot) {
+          password = snapshot.child("password").val();
+        });
+
+      function myFunction() {
+        firebase
+          .database()
+          .ref("Admin")
+          .update(updates, function (error) {
+            if (error) {
+              window.alert("Faield " + error.message);
+            } else {
+              window.location.href = "login.html";
+            }
+          });
+      }
+    </script>
+  </body>
+</html>
